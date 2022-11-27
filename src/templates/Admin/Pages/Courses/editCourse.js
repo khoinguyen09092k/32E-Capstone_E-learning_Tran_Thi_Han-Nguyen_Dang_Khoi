@@ -126,6 +126,7 @@ export default function EditCourse(props) {
                     formik.setFieldValue("tenDanhMucKhoaHoc", values)
                   }
                 >
+                  
                   <Select.Option value="Lập trình Backend">
                     Lập trình Backend
                   </Select.Option>
@@ -176,7 +177,7 @@ export default function EditCourse(props) {
                 <button
                   className="py-2 px-8 hover:shadow-xl transition-all duration-150"
                   type="submit"
-                  style={{ backgroundColor: "#e96036", color: "#fff" }}
+                  style={{ backgroundColor: "#33CC99", color: "#fff" }}
                 >
                   Cập nhật
                 </button>

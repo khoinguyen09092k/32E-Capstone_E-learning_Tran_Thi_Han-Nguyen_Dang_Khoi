@@ -45,26 +45,27 @@ export default function DetailsCourse(props) {
             className="courses_tab_home relative lg:mb-12 mx-5 px-3 lg:px-6 py-6 lg:py-12 bg-white rounded-3xl shadow-xl"
           >
             <div className="absolute top-0 left-0"></div>
-            <p className="rounded-lg mb-8 text-center text-purple-700 bg-indigo-100 py-2 px-3 w-fit text-xs">
-              {course?.danhMucKhoaHoc?.tenDanhMucKhoaHoc}
-            </p>
-            <div className="text-center">
+            <div className="">
               <LazyLoad height={200}>
                 <img
                   alt={course?.tenKhoaHoc}
-                  className="w-full mb-8 object-cover object-center rounded-lg inline-block "
+                  className="w-full mb-2 object-cover object-center rounded-lg inline-block "
                   style={{
                     maxHeight: "150px",
                     minHeight: "150px",
                     border: "1px solid #eee",
+                    
                   }}
                   src={course?.hinhAnh}
                 />
               </LazyLoad>
-              <h2 className="courses_tab_home_heading text-xl lg:text-3xl font-bold">
+              <p className="rounded-md lg:rounded-lg text-center text-white py-2 px-3 w-fit text-xs" style={{backgroundColor:'rgb(51 204 153 / 80%)'}}>
+                        {course?.danhMucKhoaHoc?.tenDanhMucKhoaHoc}
+                      </p>
+              <h2 className="courses_tab_home_heading text-xl lg:text-xl "  style={{fontWeight:'600',fontSize:'20px'}}>
                 {course?.tenKhoaHoc}
               </h2>
-              <p className="course_tab_home_description text-md lg:text-lg text-gray-500 leading-relaxed">
+              <p className="course_tab_home_description text-md lg:text-lg text-gray-600 leading-relaxed">
                 {course?.moTa?.length > 100 ? (
                   <span>{course?.moTa?.slice(0, 90)}...</span>
                 ) : (
@@ -75,10 +76,10 @@ export default function DetailsCourse(props) {
                 onClick={() => {
                   history.push(`/courses/detail/${course.maKhoaHoc}`);
                 }}
-                className="mx-auto cursor-pointer w-fit mt-4 ring-1 ring-purple-700 text-purple-700 bg-white
-                 hover:text-white hover:bg-purple-700 lg:font-semibold text-md lg:text-base px-5 py-3 rounded-lg transition-colors"
+                className="mx-auto cursor-pointer w-fit  ring-1 ring-yellow-400 text-yellow-400 bg-white hover:text-white hover:bg-yellow-400 
+                lg:font-semibold text-sm sm:text-base px-5 py-2 rounded-lg transition-colors"
               >
-                Chi tiết lớp học
+               Xem chi tiết
               </button>
             </div>
           </div>
@@ -93,66 +94,70 @@ export default function DetailsCourse(props) {
           <p className="mb-12">
             <Breadcrumbs />
           </p>
-          <p
-            className=" bg-indigo-100 rounded-md py-2 px-3 w-fit text-sm lg:text-lg"
-            style={{ color: "#7C3AED" }}
+          <h3
+            className=" rounded-md py-2 px-3 w-fit text-sm lg:text-lg"
+            style={{ color: "#33CC99" }}
           >
             {courseDetail?.danhMucKhoaHoc?.tenDanhMucKhoaHoc}
-          </p>
-          <h1 className="text-2xl lg:text-5xl font-bold mt-0 lg:mt-6">
-            {courseDetail.tenKhoaHoc}
-          </h1>
-          <img src={courseDetail?.hinhAnh} />
-        </div>
-        {/* <VideoCoursesDetail /> */}
-        
-        <div className=" mx-3 mt-8 lg:mt-24 grid lg:grid-flow-col lg:grid-cols-12 gap-4">
-          <div className="img_collegeLevel_home col-span-12 lg:col-span-9">
-            <h2 className="font-body text-2xl lg:text-5xl mb-3 lg:mb-10 font-bold leading-tight">
-              Chi tiết khoá học
-            </h2>
-            <p className="text-md lg:text-xl lg:pr-12 text-justify">
-              {courseDetail.moTa}
-            </p>
-          </div>
-          <div className="col-span-12 lg:col-span-3 grid grid-flow-row row-span-2 sticky top-10 bg-white shadow-xl rounded-lg p-5">
-            <div className="grid grid-flow-col grid-cols-6 grid-rows-9">
-              <div className="text-md lg:text-lg lg:font-semibold text-gray-500 col-span-3 flex flex-col lg:gap-4 items-start justify-between">
-                <p>Giá</p>
-                <p>Giảng viên</p>
-                <p>Đánh giá</p>
-                <p>Lượt xem</p>
-                <p>Chứng chỉ</p>
-                <p>Số lượng học viên</p>
-              </div>
-              <div className="text-md lg:text-lg lg:font-semibold  text-black col-span-3 lg:gap-4 text-right flex flex-col items-end justify-between">
-                <p className=" text-red-500">Miễn phí</p>
-                <p className="text-black underline">
-                  {courseDetail?.nguoiTao?.hoTen}
-                </p>
-                <div className="block"
-                //  style={{padding: "5px 0 15px 0"}}
-                >
-                  <RatingsDetailsCourse />
-                </div>
-                <p>{courseDetail.luotXem}</p>
-                <p>Có</p>
-                <p>{courseDetail.soLuongHocVien}</p>
-              </div>
+          </h3>
+          <div className="grid grid-cols-2 gap-4 shadow-lg rounded-lg " style={{padding:'40px'}}>
+            <div>
+              <img src={courseDetail?.hinhAnh} style={{ width: '100%' }} />
             </div>
-            <NavLink
+            <div className="" style={{borderLeft:'1px solid #ccc'}}>
+              <h2 className="text-4xl lg:text-4xl mt-0" style={{textAlign:'left',fontWeight:'500', marginLeft:'20px'}}>
+                {courseDetail.tenKhoaHoc}
+              </h2>
+
+              <div className="text-2xl" style={{textAlign:'left',fontWeight:'500', marginLeft:'20px'}}>
+              <div className="block"
+                >
+                  <p>
+                  <RatingsDetailsCourse /> Lượt xem: {courseDetail.luotXem}
+                  </p>
+                </div>
+                
+                <p>
+                  Giá: <span className="" style={{fontSize:'30px', color:'#33CC99'}}>350$</span>
+                </p>
+                <p>Giảng viên: {courseDetail?.nguoiTao?.hoTen}</p>
+              
+                <p>Chứng chỉ: Có</p>
+                <p>Lượng học viên: {courseDetail.soLuongHocVien}</p>
+                <NavLink
               to={`/checkout/${courseDetail.maKhoaHoc}`}
               className="text-white hover:text-white font-semibold text-base"
             >
-              <div className="lg:mt-5 text-md lg:text-base w-full text-center bg-purple-600 hover:bg-purple-700 p-3 lg:p-5 rounded-lg transition-colors">
-                Ghi danh
-              </div>
+              <button className=" text-center text-xl  text-white bg-yellow-400 hover:bg-yellow-400 py-3 px-4 lg:p-4 rounded-lg transition-colors">
+                Đăng ký
+              </button>
             </NavLink>
+               
+              </div>
+
+         
+            
+
+            </div>
+
           </div>
+         
+        </div>
+        
+        <div className=" mx-3 mt-3 lg:mt-24 grid lg:grid-flow-col lg:grid-cols-12 gap-4">
+          <div className="img_collegeLevel_home col-span-12 lg:col-span-9">
+            <h3 className="font-body text-2xl lg:text-2xl  lg:mb-2 leading-tight" style={{fontWeight:'600'}}>
+              CHI TIẾT KHOÁ HỌC
+            </h3>
+            <p className="text-md lg:text-md lg:pr-12 text-justify text-gray-500">
+              {courseDetail.moTa}
+            </p>
+          </div>
+         
         </div>
         <div className="related-course mx-3">
-          <h2 className="text-2xl lg:text-5xl mt-14 mb-10 font-bold leading-tight">
-            Các khoá học liên quan
+          <h2 className="text-2xl lg:text-2xl mt-14 leading-tight" style={{fontWeight:'600'}}>
+            KHOÁ HỌC LIÊN QUAN
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 -m-4">{renderSimilarCourse()}</div>
         </div>

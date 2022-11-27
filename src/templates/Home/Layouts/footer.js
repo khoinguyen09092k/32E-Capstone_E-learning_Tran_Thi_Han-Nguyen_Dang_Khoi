@@ -4,7 +4,6 @@ import LazyLoad from "react-lazyload";
 import "./Style/footer.css";
 import { getCateCoursesAction } from "../../../redux/actions/coursesActions";
 import { Link } from "react-router-dom";
-
 export default function Footer() {
   const { arrCateCourse } = useSelector(
     (state) => state.CategoryCoursesReducer
@@ -210,3 +209,4 @@ export default function Footer() {
     </Fragment>
   );
 }
+

@@ -36,11 +36,9 @@ export default function CourseEachCate(props) {
                   className="courses-each-cate relative lg:mb-12 mx-2 lg:mx-5 px-6 py-12 bg-white rounded-md lg:rounded-3xl shadow-xl"
                 >
                   <div className="absolute top-0 left-0"></div>
-                  <p className="rounded-md lg:rounded-lg mb-4 text-center text-purple-700 bg-indigo-100 py-2 px-3 w-fit text-xs">
-                    {course?.danhMucKhoaHoc?.tenDanhMucKhoaHoc}
-                  </p>
                   <div className="text-center">
                     <LazyLoad height={200}>
+                      
                       <img
                         alt={course?.tenKhoaHoc}
                         className="w-full mb-8 object-cover object-center rounded-lg inline-block"
@@ -52,7 +50,10 @@ export default function CourseEachCate(props) {
                         src={course?.hinhAnh}
                       />
                     </LazyLoad>
-                    <h2 className="courses-each-cate-heading text-lg sm:text-3xl font-bold">
+                    <p className="rounded-md lg:rounded-lg text-center text-white py-2 px-3 w-fit text-xs" style={{backgroundColor:'#33CC99'}}>
+                        {course?.danhMucKhoaHoc?.tenDanhMucKhoaHoc}
+                      </p>
+                    <h2 className="courses-each-cate-heading text-xl  sm:text-xl" style={{fontWeight:'600',fontSize:'20px'}}>
                       {course?.tenKhoaHoc}
                     </h2>
                     <p className="courses-each-cate-description text-sm sm:text-lg text-gray-500 leading-relaxed">
@@ -66,7 +67,7 @@ export default function CourseEachCate(props) {
                       onClick={() => {
                         history.push(`/courses/detail/${course.maKhoaHoc}`);
                       }}
-                      className="mx-auto cursor-pointer w-fit mt-4 ring-1 ring-purple-700 text-purple-700 bg-white hover:text-white hover:bg-purple-700 
+                      className="mx-auto cursor-pointer w-fit mt-4 ring-1 ring-yellow-400 text-yellow-400 bg-white hover:text-white hover:bg-yellow-400 
                         lg:font-semibold text-sm sm:text-base px-5 py-3 rounded-lg transition-colors"
                     >
                       Chi tiết khoá học
@@ -82,7 +83,7 @@ export default function CourseEachCate(props) {
             onClick={() => {
               handleLoadMore();
             }}
-            className="mb-14 lg:mb-32 w-fit bg-purple-600 hover:bg-purple-700 text-white font-semibold text-sm sm:text-base p-5 rounded-lg transition-colors"
+            className="mb-14 lg:mb-32 w-fit bg-yellow-400 hover:bg-yellow-400 text-white font-semibold text-sm sm:text-base p-5 rounded-lg transition-colors"
           >
             Xem thêm 
           </button>

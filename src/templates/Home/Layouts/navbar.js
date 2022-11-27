@@ -10,6 +10,7 @@ import _ from "lodash";
 import { history } from "../../../App";
 import { TOKEN, USER_SIGNIN } from "../../../utilities/Settings/config";
 import { fontSize } from "tailwindcss/defaultTheme";
+import ImgLogo from "./../../../assets/images/logo.png";
 
 export default function Navbar({ toggle }) {
   const { arrCateCourse } = useSelector(
@@ -38,7 +39,7 @@ export default function Navbar({ toggle }) {
       return (
         <div className="flex ml-auto">
           <button
-            className="text-main-500 w-max sm:px-4 sm:py-2 p-3 text-xs lg:text-md xl:text-lg 
+            className="text-yellow-500 w-max sm:px-4 sm:py-2 p-3 text-xs lg:text-md xl:text-lg 
             mr-2 rounded-md ring-1 ring-main-500 hover:bg-main-500 hover:text-white transition-colors duration-150"
             onClick={() => {
               setShowModal(!showModal);
@@ -143,17 +144,20 @@ export default function Navbar({ toggle }) {
     >
       <nav className="ml-3 sm:ml-5 flex justify-between items-center w-full bg-white text-black font-medium">
         <div className="lg:flex-none">
-          <NavLink to="/">
-            <h1 style={{fontSize:30}} >CYBERSOFT LEARNING</h1>
-          </NavLink>
+           <img
+          src={ImgLogo}
+          alt="Logo"
+          width="250px"
+          style={{marginLeft:'70px'}}
+        />
         </div>
 
-        <div className="lg:inline-flex hidden lg:flex-grow justify-end ml-auto">
+        <div className="lg:inline-flex hidden lg:flex-grow justify-center ml-auto">
           <NavLink
             activeClassName="active"
             exact={true}
             className="nav-links mx-1 xl:mx-2 my-4 px-4 p-4 lg:text-md xl:text-lg rounded-md font-medium text-black 
-    hover:shadow-lg transition-colors duration-200"
+     transition-colors duration-200"
             to="/"
           >
             {t("Trang chủ")}
@@ -162,7 +166,7 @@ export default function Navbar({ toggle }) {
             <NavLink
               activeClassName="active"
               className="nav-links lg:mx-1 xl:mx-2 my-4 px-4 p-4 lg:text-md xl:text-lg rounded-md font-medium text-black 
-    hover:shadow-lg transition-colors duration-200 group relative flex"
+     transition-colors duration-200 group relative flex"
               to="/courses"
             >
               {t("Khoá học")}
@@ -191,7 +195,7 @@ export default function Navbar({ toggle }) {
           <NavLink
             activeClassName="active"
             className="nav-links lg:mx-1 xl:mx-2 my-4 px-4 p-4 lg:text-md xl:text-lg rounded-md font-medium text-black 
-    hover:shadow-lg transition-colors duration-200"
+    transition-colors duration-200"
             to="/contact"
           >
             {t("Liên hệ")}

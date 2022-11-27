@@ -1,5 +1,6 @@
 :root {
-  --maincolor: #e96036;
+  /* --maincolor: #e96036; */
+  /* color: aquamarine; */
 }
 @media (max-width: 639px) {
   #user-menu ~ #user-menu-dropdown {
@@ -24,7 +25,7 @@
 .signup-btn-mobile,
 .active {
   background-color: var(--maincolor) !important;
-  color: white !important;
+  color:#33CC99 !important;
 }
 
 .dropdown-nav {

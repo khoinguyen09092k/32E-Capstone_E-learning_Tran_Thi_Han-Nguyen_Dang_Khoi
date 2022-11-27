@@ -8,7 +8,7 @@ import Banner2 from "./banner2";
 
 export default function CarouselHome() {
   return (
-    <div>
+    <div className="carousel">
       <Carousel
         arrows
         prevArrow={<LeftOutlined />}
@@ -17,8 +17,11 @@ export default function CarouselHome() {
         autoplaySpeed ={1500}
         draggable={true}
         lazyLoad={true}
+        style={{marginTop:'120px'}}
+       
       >
-        <div>
+        
+        <div className="banner1">
               <Banner1 />
         </div>
         <div>
