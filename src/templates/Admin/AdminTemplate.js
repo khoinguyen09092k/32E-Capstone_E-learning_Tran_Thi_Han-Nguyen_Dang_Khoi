@@ -5,9 +5,6 @@ import { Fragment } from "react";
 import {
   DotsHorizontalIcon,
   AcademicCapIcon,
-  CalendarIcon,
-  FolderIcon,
-  HomeIcon,
   PlusCircleIcon,
   UsersIcon,
 } from "@heroicons/react/outline";
@@ -74,7 +71,6 @@ export default function AdminTemplate(props) {
     <Route
       {...restProps}
       render={(propsRoute) => {
-        //props.location, props.history, props.match
         return (
           <Fragment>
             <div className="h-screen flex overflow-hidden bg-gray-100">

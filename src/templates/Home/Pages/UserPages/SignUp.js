@@ -54,7 +54,7 @@ export default function Signup() {
       .max(10,"Họ tên từ 1-10 kí tự")
       .required("Không được để trống!"),
       soDT: Yup.string()
-      .min(10,"Số điện thoại từ 10-14 số")
+      .min(9,"Số điện thoại từ 9-14 số")
       .max(14,"Số điện thoại từ 10-14 số")
       .required("Không được để trống!"),
       email: Yup.string().email("Email nhập sai định dạng !").required("Không được để trống!"),

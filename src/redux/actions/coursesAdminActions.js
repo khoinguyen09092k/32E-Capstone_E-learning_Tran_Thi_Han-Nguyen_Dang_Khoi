@@ -83,10 +83,8 @@ export const updateCourseAction = (formData) => {
         console.log(error.response?.data);
         Swal.fire({
             title: 'Cập nhật thất bại!',
-            // text: `${errors.response?.data}`,
             icon: 'error',
         })
-      
     }
   };
 };
@@ -112,7 +110,6 @@ export const capNhatKhoaHocAction=(formData)=>{
         console.log(error.response?.data);
         Swal.fire({
             title: 'Cập nhật thất bại!',
-            // text: `${errors.response?.data}`,
             icon: 'error',
         })
       

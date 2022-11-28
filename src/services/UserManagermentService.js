@@ -7,11 +7,11 @@ export class UserManagermentService extends baseService {
   }
 
   signIn = (thongTinDangNhap) => {
-    //taiKhoan:'', matKhau:''
+   
     return this.post(`/api/QuanLyNguoiDung/DangNhap`, thongTinDangNhap);
   };
   signUp = (thongTinDangKy) => {
-    //taiKhoan:'', matKhau:''
+
     return this.post(`/api/QuanLyNguoiDung/DangKy`, thongTinDangKy);
   };
   getUserList = (tuKhoa) => {

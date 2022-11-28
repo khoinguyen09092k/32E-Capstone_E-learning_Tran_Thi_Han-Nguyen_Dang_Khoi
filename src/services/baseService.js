@@ -43,15 +43,6 @@ export class baseService{
     console.log(url)
     return this.https.get(url);
   }
-
-  // get = (url) => {
-  //   return Axios({
-  //     url: `${DOMAIN}/${url}`,
-  //     method: "GET",
-  //     headers: { 'Authorization': "Bearer " + localStorage.getItem(TOKEN) }, //token yêu cầu từ backend chứng minh user đã đăng nhập rồi
-  //   });
-  // };
-
   delete = (url) => {
     return Axios({
         url: `${DOMAIN}${url}`,

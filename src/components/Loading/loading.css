@@ -17,7 +17,7 @@
 
 .draw {
   animation: draw 4000ms ease-in-out infinite;
-  stroke: #ff6652;
+  stroke: #33CC99;
 }
 
 @keyframes draw {

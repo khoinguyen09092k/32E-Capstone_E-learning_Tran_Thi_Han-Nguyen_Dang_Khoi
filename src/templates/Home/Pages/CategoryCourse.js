@@ -13,7 +13,6 @@ export default function CategoryCourse(props) {
   useEffect(() => {
     //get detail url
     let { slug } = props.match.params;
-    // console.log({id})
     dispatch(getCoursesByCateActions(slug));
   }, []);
 
@@ -23,7 +22,7 @@ export default function CategoryCourse(props) {
         <div className="text-center flex flex-col items-center">
           <p
             className=" bg-indigo-100 rounded-md py-2 px-3 w-fit text-lg text-gray-500"
-            style={{ marginTop: 200, color: "#7C3AED" }}
+            style={{ marginTop: 200, color: "#33CC99" }}
           >
             {arrCateCourse?.maDanhMuc}
           </p>

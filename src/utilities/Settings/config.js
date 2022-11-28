@@ -9,5 +9,3 @@ export const CATE_DIDONG = "DiDong";
 export const CATE_FRONTEND = "FrontEnd";
 export const CATE_FULLSTACK = "FullStack";
 export const CATE_TUDUY = "TuDuy";
-
-

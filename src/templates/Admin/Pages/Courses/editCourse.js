@@ -78,7 +78,6 @@ export default function EditCourse(props) {
       let reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = (e) => {
-        // console.log(e.target.result);
         setImgSrc(e.target.result);
       };
     }
@@ -126,7 +125,6 @@ export default function EditCourse(props) {
                     formik.setFieldValue("tenDanhMucKhoaHoc", values)
                   }
                 >
-                  
                   <Select.Option value="Lập trình Backend">
                     Lập trình Backend
                   </Select.Option>

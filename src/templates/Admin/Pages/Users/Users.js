@@ -81,14 +81,6 @@ export default function User() {
       title: "Mã người dùng",
       dataIndex: "maLoaiNguoiDung",
       key: 'maLoaiNguoiDung',
-      // sorter: (a, b) => {
-      //   let GV = a.maLoaiNguoiDung.toLowerCase().trim();
-      //   let HV = b.maLoaiNguoiDung.toLowerCase().trim();
-      //   if (GV > HV) {
-      //     return 1;
-      //   }
-      //   return -1;
-      // },
       width: "15%",
     },
     {
@@ -116,7 +108,6 @@ export default function User() {
               <TrashIcon className=" h-7 w-7 text-red-600 hover:scale-125 transition duration-150 origin-center bg-white" />
               <span className="tooltiptext">Xoá</span>
             </span>
-            
           </Fragment>
         );
       },

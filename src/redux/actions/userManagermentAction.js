@@ -17,7 +17,6 @@ export const signInAction = (DangNhap, setShowModal) => {
         });
 
         history.goForward();
-        // window.location.hash();
         setShowModal(false);
       }
     } catch (error) {
@@ -108,7 +107,6 @@ export const updateUserAction =(capNhat) =>{
         console.log(error.response?.data);
         Swal.fire({
             title: 'Cập nhật thất bại!',
-            // text: `${error.response?.data}`,
             icon: 'error',
         })
   }
@@ -131,13 +129,10 @@ export const addUserAction = (thongTinNguoiDung) => {
                     history.push('/admin/users')
                 }
             })
-
-
     } catch (error) {
         console.log(error.response?.data);
         Swal.fire({
             title: 'Thêm thất bại!',
-            // text: `${errors.response?.data}`,
             icon: 'error',
         })
     }

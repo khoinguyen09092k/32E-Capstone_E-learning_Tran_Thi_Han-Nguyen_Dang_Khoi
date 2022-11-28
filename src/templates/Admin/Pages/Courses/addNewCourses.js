@@ -141,7 +141,7 @@ const formik = useFormik({
                 <button
                   className="py-2 px-8 hover:shadow-xl transition-all duration-150"
                   type="submit"
-                  style={{ backgroundColor: "#e96036", color: "#fff" }}
+                  style={{ backgroundColor: "#33CC99", color: "#fff" }}
                 >
                   Thêm khoá học
                 </button>

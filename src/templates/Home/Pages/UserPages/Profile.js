@@ -5,9 +5,9 @@ import "../../../Page404/Style404.css"
 
 export default function Profile() {
     return (
-      <div>
+      <div className='pt-5'>
       <h1>404 Error Page #1</h1>
-      <p class="zoom-area"><b>CSS</b> animations to make a cool 404 page. </p>
+      <p class="zoom-area"><b>PAGE NOT FOUND </b> </p>
       <section class="error-container">
           <span><span>4</span></span>
           <span>0</span>

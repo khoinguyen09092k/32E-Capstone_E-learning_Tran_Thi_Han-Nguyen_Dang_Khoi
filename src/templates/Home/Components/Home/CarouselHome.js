@@ -18,16 +18,13 @@ export default function CarouselHome() {
         draggable={true}
         lazyLoad={true}
         style={{marginTop:'120px'}}
-       
       >
-        
         <div className="banner1">
               <Banner1 />
         </div>
         <div>
               <Banner2 />
         </div>
-      
       </Carousel>
     </div>
   );

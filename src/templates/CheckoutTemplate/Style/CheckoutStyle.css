@@ -21,10 +21,10 @@
   top: 105px;
 }
 .your-order-body a:hover {
-  color: #e96036 !important;
+  color: #33CC99 !important;
 }
 .your-order-body a {
-  color: #000 !important;
+  color: #000 ;
 }
 .checkout--body .ant-radio-wrapper {
   align-items: center !important;

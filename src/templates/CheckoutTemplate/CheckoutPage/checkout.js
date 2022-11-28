@@ -52,7 +52,7 @@ export default function Checkout(props) {
           <p className="mb-5">
             <BreadCrumb />
           </p>
-          <h1 className="text-4xl uppercase">Checkout</h1>
+          <h1 className="text-4xl uppercase">Thanh Toán Học Phí</h1>
         </div>
       </div>
       <div className="checkout--body">
@@ -61,7 +61,7 @@ export default function Checkout(props) {
             <div>
               <div className="payment p-5 my-8 rounded-md flex justify-between items-center">
                 <div className="flex-1">
-                  <span className="text-xl font-semibold text-indigo-700">
+                  <span className="text-xl font-semibold text-black">
                     Thanh toán
                   </span>
                 </div>
@@ -80,16 +80,14 @@ export default function Checkout(props) {
               <NavLink to ="/">
               <button 
                 // countDown={countDown}
-                className="mt-10 py-5 w-full bg-indigo-500 hover:bg-indigo-700 text-lg rounded-md transition duration-150 text-white">
-
-               Đặt hàng
-               
+                className="mt-10 py-5 w-full bg-green-400 hover:bg-green-700 text-lg rounded-md transition duration-150 text-white">
+              Xác Nhận Thanh Toán 
               </button>
               </NavLink>
             </div>
             <div className="relative">
               <div className="your-order p-5 my-8 rounded-md text-center">
-                <h4 className="text-xl font-semibold text-indigo-700">
+                <h4 className="text-xl font-semibold text-black ">
                   Đơn hàng của bạn
                 </h4>
               </div>

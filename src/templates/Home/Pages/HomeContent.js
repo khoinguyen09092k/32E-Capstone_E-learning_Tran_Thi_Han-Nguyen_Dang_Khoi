@@ -33,7 +33,7 @@ export default function HomeContent(props) {
                 <div className="mb-4">
                   <h4 className="text-lg">HỆ THỐNG HỌC TẬP</h4>
                   <p> <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>Tự động chấm điểm trắc nghiệm và đưa câu hỏi tùy theo mức độ học viên</p>
-                  <p> <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>Thống kê lượt xem video, làm bài, điểm số theo chu kỳ</p>
+                  <p> <i class="fa-solid fa-circle-check text-green-500 mr-3"></i>Thống kê lượt xem video, làm bài tập, điểm số theo chu kỳ và xếp hạng học viên mỗi tuần</p>
                 </div>
                 <div>
                   <h4 className="text-lg">LỘ TRÌNH PHÙ HỢP</h4>
@@ -104,8 +104,8 @@ export default function HomeContent(props) {
                       <img className=" rounded-full flex-shrink-0 object-cover object-center" src={face1} alt="" style={{ width: '60px', height: '60px' }} />
 
                       <span class="flex-grow flex flex-col pl-4">
-                        <span class="title-font font-medium text-gray-900">Holden Caulfield</span>
-                        <span class="text-gray-500 text-sm">UI DEVELOPER</span>
+                        <span class="title-font font-medium text-gray-900">Khôi Nguyễn </span>
+                        <span class="text-gray-500 text-sm">CODE ADMIN</span>
                       </span>
                     </a>
                   </div>
@@ -119,8 +119,8 @@ export default function HomeContent(props) {
                       <img className=" rounded-full flex-shrink-0 object-cover object-center" src={face2} alt="" style={{ width: '60px', height: '60px' }} />
 
                       <span class="flex-grow flex flex-col pl-4">
-                        <span class="title-font font-medium text-gray-900">Alper Kamu</span>
-                        <span class="text-gray-500 text-sm">DESIGNER</span>
+                        <span class="title-font font-medium text-gray-900">Hân Trần</span>
+                        <span class="text-gray-500 text-sm">CODE USER</span>
                       </span>
                     </a>
                   </div>
